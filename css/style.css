@@ -1,0 +1,687 @@
+/* CSS RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* border: 1px solid red; */
+}
+
+/* CSS VARIABLS */
+
+/* MAIN BG */
+#main_bg {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    z-index: -999;
+    background: url(/images/main_bg.jpg)no-repeat center center/cover;
+}
+
+/* NAVBAR */
+#navbar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 15px 30px;
+    padding-right: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbarlogo a {
+    display: block;
+    width: 200px;
+}
+
+.navbarlogo a img {
+    filter: brightness(0) invert(1);
+}
+
+.navbarlist div ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbarlist div ul li {
+    list-style: none;
+    padding: 11px 12px;
+}
+
+.navbarlist div ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.22rem;
+    display: block;
+    width: max-content;
+    display: inline-block;
+}
+
+.navbarlist div ul li a:hover {
+    color: rgb(170, 170, 170);
+}
+
+.navbarlist div ul li:nth-child(6) {
+    margin-left: 35px;
+}
+
+.navbarlist div ul li:is(:nth-child(6), :nth-child(7)) a:hover {
+    color: white;
+}
+
+#hamburgermenu input {
+    display: none;
+}
+
+/* HOME */
+
+#home {
+    height: 410.5px;
+}
+
+#home::before {
+    content: "";
+    background: url(/images/bg.jpg)no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -99;
+    height: 545px;
+    width: 100%;
+}
+
+#home div,
+#home {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+#home .homeheading {
+    background-color: rgba(255, 255, 255, 0.46);
+    color: white;
+    width: 560px;
+    text-align: center;
+}
+
+#home .homeheading h2:first-child {
+    margin-top: 50px;
+    margin-bottom: 10px;
+    font-size: 1.32rem;
+    font-weight: 500;
+}
+
+#home .homeheading h2:last-child {
+    font-size: 2.9rem;
+    margin-bottom: 50px;
+}
+
+#home .homebutton {
+    position: relative;
+    top: -24.2px;
+    padding-bottom: 100px;
+}
+
+/* GALLERY */
+
+#gallery {
+    background-color: white;
+}
+
+#gallery h2 {
+    text-align: center;
+    font-size: 3rem;
+    color: rgb(44, 93, 74);
+    padding-top: 75px;
+    margin-bottom: 45px;
+}
+
+.galleryimg {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 15px;
+}
+
+.galleryimg>div {
+    width: 23.3vw;
+    height: 23.3vw;
+    overflow: hidden;
+}
+
+.galleryimg>div img {
+    transition: all 1s ease-in-out;
+    object-fit: cover;
+}
+
+.galleryimg>div img:hover {
+    transform: scale(1.2);
+}
+
+
+/* MENU */
+#menu {
+    background: url(/images/menubg.jpg)no-repeat center center/cover;
+}
+
+#menu_list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(209, 213, 218, 0.75), rgba(209, 213, 218, 0.75));
+    backdrop-filter: blur(15px);
+    padding-top: 75px;
+}
+
+#menu_list>div h2 {
+    color: rgb(44, 93, 74);
+    font-size: 3rem;
+}
+
+#menu_list>p {
+    color: rgb(44, 93, 74);
+    margin: 20px 0;
+    font-size: 1.4rem;
+}
+
+#menu_list #menu_dishes {
+    display: flex;
+    width: 65vw;
+    justify-content: space-between;
+}
+
+#menu_list #menu_dishes>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 60px 8px 60px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#menu_list #menu_dishes>div i {
+    font-size: 2.2rem;
+    color: rgba(44, 93, 74, 0.5);
+}
+
+#menu_list #menu_dishes>div span {
+    color: rgba(44, 93, 74, 0.5);
+    margin-top: 15px;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+#menu_list #menu_dishes>div:hover :is(i, span) {
+    color: rgb(136, 119, 67);
+    transition: color 0.3s;
+}
+
+#menu_list #menu_dishes>div .dishes_icon {
+    color: rgb(136, 119, 67);
+}
+
+#menu_list #menu_dishes>div .active,
+#menu_list #menu_dishes>div:hover .dishes_border {
+    position: absolute;
+    bottom: -8px;
+    width: 85%;
+    border: 8px solid rgb(136, 119, 67);
+    border-radius: 6px;
+    animation: bordercolor 0.3s ease-in-out;
+}
+
+@keyframes bordercolor {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 85%;
+    }
+}
+
+#menu_bg {
+    background-color: rgba(160, 168, 177, 0.45);
+    padding: 30px 0 60px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu_bg #menu_image {
+    width: 374px;
+    height: 453px;
+}
+
+#menu_bg #menu_image img {
+    object-fit: cover;
+    object-position: 100% 92%;
+    border-radius: 12px;
+}
+
+#menu_bg #menu_items {
+    height: 453px;
+    width: 748px;
+    background-color: rgb(136, 119, 67);
+    padding: 20px 30px;
+    margin-left: 12px;
+    color: white;
+    border-radius: 12px;
+}
+
+#menu_bg #menu_items h3 {
+    padding-top: 12px;
+    font-size: 1.5rem;
+}
+
+#menu_bg #menu_items>div:nth-child(2) {
+    height: 360px;
+    margin-top: 12px;
+    border-top: 1px solid white;
+    overflow-y: scroll;
+}
+
+#menu_bg #menu_items>div:nth-child(2)::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 20px;
+}
+
+#menu_bg #menu_items>div:nth-child(2)::-webkit-scrollbar-thumb {
+    background-color: rgb(126, 106, 51);
+
+}
+
+#menu_bg #menu_items>div:nth-child(2)>div {
+    padding: 12px;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* MEMORIES */
+#memories {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 70px 0;
+}
+
+#memories>div{
+    width: 90vw;
+}
+
+#memories h2 {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 22px;
+}
+
+#memories p {
+    color: white;
+    font-size: 1.35rem;
+}
+
+#memories #memories_btn {
+    margin-top: 42px;
+}
+
+
+/* Chief Cook */
+
+#Chiefcook {
+    background: white;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 75px 0;
+}
+
+#Chiefcook #Chiefcook_quote,
+#Chiefcook #Chiefcook_bio {
+    width: 384px;
+}
+
+#Chiefcook #Chiefcook_quote h2 {
+    font-size: 3.8rem;
+    color: rgb(136, 119, 67);
+}
+
+#Chiefcook #Chiefcook_quote>div:nth-child(2) {
+    font-size: 1.3rem;
+    margin-top: 25px;
+    color: rgb(80, 80, 80);
+}
+
+#Chiefcook #Chiefcook_bio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#Chiefcook #Chiefcook_bio #Chiefcook_name {
+    font-size: 2rem;
+    color: rgb(44, 93, 74);
+}
+
+#Chiefcook #Chiefcook_bio>div:nth-child(2) {
+    font-size: 1.3rem;
+    color: rgb(136, 119, 67);
+    margin: 20px 0 50px 0;
+}
+
+#Chiefcook #Chiefcook_bio #Chiefcook_img {
+    width: 280px;
+    height: 280px;
+}
+
+#Chiefcook #Chiefcook_bio #Chiefcook_img img {
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 100% 70%;
+}
+
+
+/* Customer Reviews */
+
+#customer_reviews {
+    background: url(/images/review_bg.jpg)no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+}
+
+#customer_reviews #review_box {
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(15px);
+    margin: 80px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85.5%;
+    border-radius: 12px;
+    padding: 45px 0;
+}
+
+#customer_reviews #review_box>div {
+    width: 1024px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#customer_reviews #review_box>div #review {
+    width: 768px;
+}
+
+#customer_reviews #review_box #review .fa-quote-left {
+    font-size: 3.2rem;
+    background-image: linear-gradient(-180deg, rgb(226, 201, 110) 0%, rgb(136, 119, 67) 96%);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+#customer_reviews #review_box #review :is(#customer_name, p) {
+    font-size: 1.3rem;
+    color: rgb(44, 93, 74);
+}
+
+#customer_reviews #review_box #review #customer_name {
+    margin: 18px 0;
+}
+
+#customer_reviews #dot_wrap div i {
+    padding: 10px;
+    font-size: 0.6rem;
+    background-image: linear-gradient(-180deg, rgb(226, 201, 110) 0%, rgb(136, 119, 67) 96%);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+/* Booking */
+
+#booking {
+    background: rgb(44, 93, 74);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0;
+}
+
+#booking>div {
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+    width: 66%;
+    height: 580px;
+    box-sizing: border-box;
+}
+
+#booking>div #booking_img {
+    width: 100%;
+    height: 580px;
+    box-sizing: border-box;
+}
+
+#booking>div #booking_img img {
+    object-fit: cover;
+    object-position: 100% 1%;
+}
+
+#booking>div #booking_form {
+    background-color: white;
+    padding: 25px 30px;
+    height: 580px;
+    box-sizing: border-box;
+}
+
+#booking>div #booking_form h2 {
+    color: rgb(136, 119, 67);
+    font-size: 2.3rem;
+}
+
+#booking>div #booking_form p {
+    color: rgb(44, 93, 74);
+    font-size: 1.3rem;
+    margin: 12px 0 18px 0;
+}
+
+#booking>div #booking_form label>div {
+    color: rgb(44, 93, 74);
+    font-size: 1.03rem;
+}
+
+#booking>div #booking_form label input {
+    padding: 13.5px;
+    border-radius: 25px;
+    border: 1px solid rgba(137, 137, 137, 0.7);
+    outline: none;
+    width: 100%;
+    font-size: 1.15rem;
+    color: rgb(44, 93, 74);
+}
+
+
+#booking>div #booking_form label textarea {
+    padding: 14.5px;
+    border-radius: 25px;
+    border: 1px solid rgba(137, 137, 137, 0.7);
+    outline: none;
+    width: 100%;
+    margin: 5px 0 12px 0;
+    resize: none;
+    height: 100px;
+    font-size: 1.1rem;
+    color: rgb(44, 93, 74);
+}
+
+#booking>div #booking_form label .input {
+    position: relative;
+    margin: 5px 0 18px 0;
+}
+
+#booking>div #booking_form label .required {
+    position: absolute;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    top: 2px;
+    right: 20px;
+
+}
+
+#booking>div #booking_form button {
+    margin-top: 12px;
+}
+
+/* ScrollToTop */
+
+#scrolltotop {
+    position: fixed;
+    right: 24px;
+    bottom: 22px;
+    background: linear-gradient(rgb(255, 255, 255) 0%, rgb(209, 213, 218) 100%) 0% 0% no-repeat transparent;
+    box-shadow: rgba(44, 93, 74, 0.15) 0px 4px 8px;
+    border: 1px solid rgb(209, 213, 218);
+    border-radius: 50%;
+    font-size: 1.4rem;
+}
+
+#scrolltotop:hover {
+    background: linear-gradient(rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%) 0% 0% no-repeat transparent;
+}
+
+#scrolltotop a {
+    display: block;
+    padding: 12px 15px;
+    color: rgb(136, 119, 67);
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    background-color: rgb(28, 28, 28);
+    padding: 10px 0;
+    color: white
+}
+
+/* BUTTON */
+
+.btn {
+    padding: 15px 40px;
+    border-radius: 25px;
+    color: white;
+    background-image: linear-gradient(-180deg, rgb(226, 201, 110) 0%, rgb(136, 119, 67) 96%);
+    font-size: 1rem;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-image: linear-gradient(-180deg, rgb(136, 119, 67) 0%, rgb(136, 119, 67) 96%);
+}
+
+
+
+/* Media Querry */
+@media only screen and (max-width:1400px) {
+
+    #booking>div{
+        width: 70%;
+    }
+
+    @media only screen and (max-width:1250px) {
+
+        #menu_list #menu_dishes {
+            width: 72vw;
+        }
+
+        #menu_bg #menu_image {
+            width: 350px;
+            height: 430px;
+        }
+
+        #menu_bg #menu_items {
+            width: 700px;
+            height: 430px;
+        }
+
+        #menu_bg #menu_items h3 {
+            font-size: 1.4rem;
+        }
+
+        #menu_bg #menu_items>div:nth-child(2) {
+            height: 338px;
+        }
+
+        #menu_bg #menu_items>div:nth-child(2)>div {
+            font-size: 1.05rem;
+        }
+
+        #customer_reviews #review_box {
+            width: 90%;
+        }
+
+        #customer_reviews #review_box>div {
+            width: 950px;
+        }
+
+        #booking>div{
+            width: 80%;
+        }
+
+        @media only screen and (max-width:1150px) {
+
+            #menu_list #menu_dishes {
+                width: 80vw;
+            }
+
+            #menu_bg #menu_image {
+                width: 330px;
+                height: 400px;
+            }
+
+            #menu_bg #menu_items {
+                width: 630px;
+                height: 400px;
+            }
+
+            #menu_bg #menu_items>div:nth-child(2) {
+                height: 300px;
+            }
+
+            #customer_reviews #review_box>div {
+                width: 850px;
+            }
+
+            #customer_reviews #review_box>div #review {
+                width: 720px;
+            }
+
+            #booking>div{
+                width: 83%;
+            }
+
+            @media only screen and (max-width:1050px) {
+
+                #menu_bg #menu_image {
+                    width: 310px;
+                    height: 380px;
+                }
+
+                #menu_bg #menu_items {
+                    width: 610px;
+                    height: 380px;
+                }
+
+                #customer_reviews #review_box {
+                    width: 93%;
+                    padding: 30px 0;
+                }
+            }
+        }
+    }
+}
