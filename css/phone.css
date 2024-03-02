@@ -89,7 +89,7 @@
   height: auto;
   max-height: 564px;
   width: 500px;
-  margin-top: 15px;
+  margin-top: 25px;
   margin-left: 0;
 }
 
@@ -140,10 +140,16 @@
   #menu_list #menu_dishes {
     width: 100%;
     overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+  }
+
+  #menu_list #menu_dishes::-webkit-scrollbar{
+    height: 1px;
   }
 
   #menu_list #menu_dishes > div {
     min-width: 33.33%;
+    scroll-snap-align: center;
   }
 
   #menu_list #menu_dishes > div .dishes_border {
@@ -159,11 +165,11 @@
     justify-content: center;
   }
 
-  #customer_reviews #review_box > div #review{
+  #customer_reviews #review_box > div #review {
     width: 90%;
   }
 
-  #customer_reviews #dot_wrap{
+  #customer_reviews #dot_wrap {
     display: flex;
     margin-top: 20px;
   }
@@ -202,6 +208,14 @@
 
       #home > div {
         margin-top: 50px;
+      }
+
+      #customer_reviews #review_box > div #review {
+        max-height: 220px;
+      }
+
+      #customer_reviews #review_box > div #review>div{
+        margin: 50px 0;
       }
 
       @media only screen and (max-width: 600px) {
@@ -243,14 +257,34 @@
           margin-right: 5px;
         }
 
-        @media only screen and (max-width: 450px){
-            #booking > div{
-                width: 100%;
-            }
+        #customer_reviews #review_box > div #review {
+          max-height: 170px;
+        }
+  
+        #customer_reviews #review_box > div #review>div{
+          margin: 20px 0;
+        }
 
-            #booking > div #booking_form{
-                padding: 20px 15px;
-            }
+        @media only screen and (max-width: 450px) {
+          #booking {
+            padding: 0;
+          }
+
+          #booking > div {
+            width: 100%;
+          }
+
+          #booking > div #booking_form {
+            padding: 20px 15px;
+          }
+
+          #customer_reviews #review_box > div #review {
+            max-height: 190px;
+          }
+    
+          #customer_reviews #review_box > div #review>div{
+            margin: 30px 0;
+          }
         }
       }
     }
