@@ -144,7 +144,7 @@
 
 .galleryimg > div {
   width: 23.3vw;
-  height: 23.3vw;
+  aspect-ratio: 1/1;
   overflow: hidden;
 }
 
