@@ -5,6 +5,7 @@
   box-sizing: border-box;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   /* border: 1px solid red; */
+  scroll-behavior: smooth;
 }
 
 /* CSS VARIABLS */
