@@ -1,4 +1,4 @@
-// HAMBURGERMENU
+
 const MenuDishes = {
     Salads: {
         img: "../images/salad.jpg",

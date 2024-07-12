@@ -438,20 +438,20 @@
   user-select: none;
 }
 
-#customer_reviews #review_box > div #review::-webkit-scrollbar{
+#customer_reviews #review_box > div #review::-webkit-scrollbar {
   width: 1px;
 }
 
-#customer_reviews #review_box > div #review>div{
+#customer_reviews #review_box > div #review > div {
   scroll-snap-align: center;
   margin: 30px 0;
 }
 
-#customer_reviews #review_box > div #review>div:first-child{
+#customer_reviews #review_box > div #review > div:first-child {
   margin-top: 0;
 }
 
-#customer_reviews #review_box > div #review>div:last-child{
+#customer_reviews #review_box > div #review > div:last-child {
   margin-bottom: 0;
 }
 
@@ -631,7 +631,7 @@ footer {
   cursor: pointer;
 }
 
-.btn a{
+.btn a {
   padding: 15px 40px;
   color: white;
   text-decoration: none;
